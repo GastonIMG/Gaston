@@ -1,4 +1,12 @@
-/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo General */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,13 +14,17 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
+/* Estilo Header */
 .header {
-    background: #000; /* Fondo negro para el header */
+    background: #000; 
     color: #fff;
-    padding: 20px 0;
-    position: relative;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 10;
+    transition: top 0.3s;
 }
 
 .header-content {
@@ -21,7 +33,8 @@ body {
     align-items: center;
     max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
+    padding: 0 10px;
+    
 }
 
 .logo a {
@@ -48,14 +61,14 @@ body {
 }
 
 .navbar ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .navbar ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 10px 10px;
     display: inline-block;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
@@ -85,12 +98,12 @@ body {
     transform-origin: bottom left;
 }
 
-/* Banner estilos */
+/* Banner estilo */
 
 .banner {
     position: relative;
     background: url(/img/banner.png);
-    height: 500px;
+    height: 400px;
     color: #fff;
     display: flex;
     align-items: center;
@@ -101,7 +114,7 @@ body {
 .banner-content {
     max-width: 800px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido para el texto */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 10px;
 }
 
@@ -117,22 +130,23 @@ body {
 }
 
 
-/* Sticky Navbar Styles */
+/* Sticky Navbar Estilos */
 .sticky {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: #000; /* Fondo negro para el navbar sticky */
+    background: #000; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
 .header {
-    padding-bottom: 70px; /* Ajusta para la altura del navbar sticky */
+    padding-bottom: 20px; 
 }
 
-/* Section Styles */
+/* Sección Sobre Mi */
+
 .home {
     text-align: center;
     padding: 100px 20px;
@@ -160,6 +174,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-direction: column;
 }
 
 .profile-image {
@@ -173,6 +188,8 @@ body {
 .about-details h3 {
     margin-top: 0;
 }
+
+/* Sección Experincia */
 
 .experience {
     background: #f9f9f9;
@@ -200,7 +217,8 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Habilidades */
+/* Sección Habilidades */
+
 .skills {
     background: #fff;
     padding: 40px 20px;
@@ -230,7 +248,7 @@ body {
 .progress-bar .fill {
     background: #007bff;
     height: 100%;
-    width: 0; /* Comienza desde 0 para la animación */
+    width: 0; 
     transition: width 1s;
 }
 
@@ -238,6 +256,7 @@ body {
     margin: 0;
 }
 
+/* Sección Educación */
 
 .education {
     background: #f9f9f9;
@@ -302,7 +321,8 @@ body {
     color: #555;
 }
 
-/* Estilos Generales del Footer */
+/* Estilos del Footer */
+
 .footer {
     background-color: #333;
     color: #fff;
@@ -375,24 +395,159 @@ body {
 }
 
 /* Estilos del Logo */
+
 .footer-logo {
-    max-width: 150px; /* Ajusta el tamaño máximo del logo */
-    margin-bottom: 20px; /* Espacio debajo del logo */
-    transition: transform 0.3s; /* Transición para efectos de escala y movimiento */
+    max-width: 150px; 
+    margin-bottom: 20px;
+    transition: transform 0.3s; 
     
 }
 
 .footer-logo.scale {
-    transform: scale(1.1); /* Escalado del logo */
+    transform: scale(1.1); 
 }
 
 .footer-logo.rotate {
-    transform: rotate(360deg); /* Rotación del logo */
+    transform: rotate(360deg); 
 }
 
 .footer-logo.move {
-    transform: translateY(-10px); /* Desplazamiento del logo hacia arriba */
+    transform: translateY(-10px); 
 }
 
+/* Estilos generales para pantallas grandes (desktops) */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.banner h1 {
+    font-size: 3rem;
+}
+
+.banner p {
+    font-size: 1.5rem;
+}
+
+.progress-bar {
+    height: 20px;
+}
+
+.education-image {
+    width: 150px;
+    height: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para pantallas de hasta 768px (tabletas) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.2rem;
+    }
+
+    .progress-bar {
+        height: 15px;
+    }
+
+    .education-image {
+        width: 120px;
+        height: 80px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Estilos para pantallas de hasta 480px (móviles) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .header-content {
+        padding: 0 10px;
+    }
+
+    .navbar ul {
+        padding: 0;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .progress-bar {
+        height: 12px;
+    }
+
+    .education-image {
+        width: 100px;
+        height: 60px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Estilos para pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+    .header-content {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .banner {
+        height: 500px;
+    }
+
+    .banner h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner p {
+        font-size: 1.8rem;
+    }
+}
 
 
